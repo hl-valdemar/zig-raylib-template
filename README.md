@@ -1,6 +1,8 @@
 # Template for games seeking to use Zig and Raylib to achieve their goals
 ## Or simply to mess around
 
+![image](https://github.com/user-attachments/assets/3d3d768d-5c1f-4e5c-b37b-cdba59ed7f48)
+
 Features an example of a message/event system:
 - Press <kbd>=</kbd> to bring up the debug view.
   - Includes information about the frame time and FPS.
