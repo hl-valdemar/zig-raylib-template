@@ -1,5 +1,5 @@
 .{
-    .name = "glob",
+    .name = "zig-raylib-template",
     .version = "0.0.1",
     .dependencies = .{
         .@"raylib-zig" = .{
