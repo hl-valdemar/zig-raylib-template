@@ -9,3 +9,5 @@ Features an example of a message/event system:
  
 Do with this what you will.
 Godspeed.
+
+NB: remember to change the name of your project. Relevant files are of course `build.zig` and `build.zig.zon`.
