@@ -11,15 +11,15 @@ pub const Message = union(enum) {
 };
 
 pub const GameOptions = struct {
+    title: [*:0]const u8,
     screen_size: rl.Vector2,
-    virtual_size: rl.Vector2,
     cap_fps: bool,
     view_debug: bool,
 
     pub fn default() GameOptions {
         return GameOptions{
+            .title = "Zig/Raylib Template - Change your title!",
             .screen_size = rl.Vector2.init(8 * 150, 8 * 100),
-            .virtual_size = rl.Vector2.init(1200, 800),
             .cap_fps = false,
             .view_debug = false,
         };
@@ -29,6 +29,7 @@ pub const GameOptions = struct {
 /// Represents the state of a game.
 pub const Game = struct {
     // Pertaining to the window.
+    title: [*:0]const u8,
     screen_width: i32,
     screen_height: i32,
 
@@ -45,6 +46,7 @@ pub const Game = struct {
     pub fn init(options: GameOptions) Game {
         const game = Game{
             // ---------------------
+            .title = options.title,
             .screen_width = @as(i32, @intFromFloat(options.screen_size.x)),
             .screen_height = @as(i32, @intFromFloat(options.screen_size.y)),
 
@@ -70,7 +72,7 @@ pub const Game = struct {
     /// Runs a game.
     pub fn run(self: *Game) void {
         // Setup
-        rl.initWindow(self.screen_width, self.screen_height, "Glob");
+        rl.initWindow(self.screen_width, self.screen_height, self.title);
         defer rl.closeWindow();
 
         rl.setWindowState(rl.ConfigFlags{ .window_resizable = true });
