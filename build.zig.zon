@@ -1,0 +1,11 @@
+.{
+    .name = "glob",
+    .version = "0.0.1",
+    .dependencies = .{
+        .@"raylib-zig" = .{
+            .url = "https://github.com/Not-Nik/raylib-zig/archive/devel.tar.gz",
+            .hash = "12209ba41100c91e36311568875d56f90f73fea84521ec15fc83963078bbc8f0def1",
+        },
+    },
+    .paths = .{""},
+}
